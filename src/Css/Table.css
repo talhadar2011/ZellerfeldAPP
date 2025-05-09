@@ -1,0 +1,70 @@
+
+  .Container{
+    margin:0% 10%;
+  }
+  /* th{
+    min-width: 150px;
+  } */
+ 
+.select{
+    border: 1px solid black; /* You can adjust the border style, width, and color */
+
+  }
+.headerTitle{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content:space-between ;
+    padding: 2%;
+    min-width: 150px;
+    cursor: pointer;
+}
+.headerTitle{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content:space-between ;
+    padding: 2%;
+}
+.select option {
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px; 
+    margin-bottom: 5px; 
+  }
+  
+  .select option:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+.Clear_Select{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    .Clear_Select {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: flex-start; /* Align items to the start (top) */
+    }
+    .Container{
+      margin:0% ;
+    }
+    .headerTitle{
+      background-color: black;
+      color: aliceblue;
+      border-radius: 4px;
+      display: flex;
+      margin-bottom: 5px;
+      justify-content:space-between ;
+      padding: 2%;
+      min-width: 100px;
+  }
+  }
+  
