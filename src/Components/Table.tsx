@@ -86,7 +86,7 @@ export default function Table() {
             <div className="row">
             <div className="col-sm-12" style={{overflowX:"auto"}}>
             <table className="table table-secondary table-striped table-bordered">
-                <thead className="sticky-top" >
+                <thead  >
                 <tr>
                     {headers.map((header) => (
                         <th scope="col" className="Header" key={header}>
