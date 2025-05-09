@@ -84,7 +84,7 @@ export default function Table() {
 
           <div className="Container">
             <div className="row">
-            <div className="col-sm-12" style={{overflowX:"auto"}}>
+            <div className="col-12" style={{overflowX:"auto"}}>
             <table className="table table-secondary table-striped table-bordered">
                 <thead>
                 <tr>
