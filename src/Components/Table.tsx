@@ -1,5 +1,5 @@
 
-import {  useState } from "react"
+import {  useEffect, useState } from "react"
 import Data from "../data.json"
 import '../Css/Table.css'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -67,7 +67,9 @@ export default function Table() {
        };
     //Set Preset Filter   
     const presetFilter=()=>{
-            setFilters({...filters,"model":"Lotus","type":"Sample"})
+        setFilters({...filters,"model":"Lotus","type":"Sample"})
+
+      
     }
     //Clear All Applied Filters
     const clearpresetFilter=()=>{
@@ -75,18 +77,18 @@ export default function Table() {
     }
     //Getting the Headers for the table from the Data
     const headers =Object.keys(rows[0]) 
-    console.log(headers,"Header")
+    console.log(headers,"Header",filters,"Filters")
 
   return (  
             <>
+          
           <button className="btn btn-dark" onClick={()=>presetFilter()} style={{margin:"10px"}}>Preset Filter</button>
           <button className="btn btn-secondary" onClick={()=>clearpresetFilter()} style={{margin:"10px"}}>Clear Preset Filter</button>
-
+          
           <div className="Container">
-            <div className="row">
-            <div className="col-12" style={{overflowX:"auto"}}>
-            <table className="table table-secondary table-striped table-bordered">
-                <thead>
+            <div className="col-12 overflow-scroll" style={{maxHeight:"90vh"}} >
+            <table className="table table-secondary table-striped table-bordered" >
+                <thead className="sticky-top">
                 <tr>
                     {headers.map((header) => (
                         <th scope="col" className="Header" key={header}>
@@ -149,7 +151,7 @@ export default function Table() {
                 </tr>
                 
                 </thead>
-                <tbody>
+                 <tbody>
                 {filteredRows().map((row) => (
                     <tr key={row.oid}>
                     {headers.map((header) => (
@@ -158,11 +160,12 @@ export default function Table() {
                     </tr>
                 ))}
                 </tbody>
+               
             </table>
             </div>
             </div>
             
-        </div>
+        
             </>
     
   );

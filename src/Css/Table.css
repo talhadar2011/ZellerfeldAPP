@@ -60,4 +60,14 @@
     
   
   }
-  
+tbody{
+  display:table-caption;
+  overflow:auto;
+  max-height: 300px;
+}
+tr{
+  display: table-row;
+}
+thead{
+  border-top: 2px solid black;
+}
